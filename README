@@ -16,14 +16,13 @@ Página web informativa sobre la mitología de la antigua Grecia, con un diseño
 ## 🚀 **CÓMO VER EL PROYECTO**
 
 ### Opción 1: Ver en línea (GitHub Pages)
-1. Ve a: `https://RociVB.github.io/olympus/`
+1. Ve a: `https://github.com/RociVB/Dioses-del-olimpo.git`
 2. Navega por las diferentes secciones usando el menú superior
 
 ### Opción 2: Clonar y ejecutar localmente
 ```bash
 # Clonar el repositorio
-git clone https://github.com/RociVB/olympus.git
-
+git clone https://github.com/RociVB/Dioses-del-olimpo.git
 # Entrar a la carpeta
 cd olympus
 
