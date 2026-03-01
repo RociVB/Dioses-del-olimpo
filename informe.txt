@@ -1,0 +1,45 @@
+INFORME: Crónicas del Olimpo
+e-actividad 3.1 - Diseño web con HTML & CSS
+
+1. DESCRIPCIÓN DEL PROYECTO
+Sitio web de mitología griega con 4 secciones: Inicio, Dioses, Bestiario y Oráculo. El proyecto utiliza un diseño Mobile-First enfocado en la interactividad y la estética clásica.
+
+2. ESTRUCTURA DEL SITIO
+- index.html → Inicio con sistema de navegación responsivo y carrusel de imágenes.
+- dioses.html → Galería de deidades con layout de tarjetas personalizadas.
+- bestiario.html → Catálogo de criaturas con sistema de acordeón elástico vertical/horizontal.
+- oraculo.html → Formulario místico con persistencia de datos en el navegador.
+
+3. TECNOLOGÍAS UTILIZADAS
+- HTML5 Semántico: nav, main, section, article, details, summary.
+- CSS3 Avanzado: Flexbox, Grid, Variables, Media Queries y Checkbox Hack para el menú.
+- JavaScript Vanilla: Gestión de localStorage para el formulario y lógica del carrusel.
+
+4. CARACTERÍSTICAS IMPLEMENTADAS
+✅ Navegación Móvil: Menú hamburguesa funcional mediante el "Checkbox Hack" (CSS puro).
+✅ Carrusel de Imágenes (Index): Sistema visual para destacar las secciones principales del sitio.
+✅ Acordeón de Bestias (Bestiario): Galería interactiva que utiliza flex-grow para expandir las tarjetas.
+✅ Integridad Gráfica: Uso de background-size: contain para garantizar que las criaturas se vean completas.
+✅ Base de Datos Local: Persistencia de consultas al Oráculo mediante localStorage.
+✅ Diseño Responsive: Adaptación de layouts de grid a columnas para dispositivos móviles.
+
+5. PROBLEMAS ENCONTRADOS Y SOLUCIONES
+- Imágenes del Bestiario cortadas: Al usar 'background-size: cover', el acordeón ocultaba las extremidades de las criaturas al expandirse. Solución: Se cambió a 'contain' para asegurar que la ilustración se vea íntegra de pies a cabeza.
+- Colapso visual del Acordeón: Las tarjetas del bestiario se veían como franjas delgadas sin contenido visible. Solución: Se definió una altura fija (height) al contenedor padre y se ajustó el coeficiente de flex-grow de las tarjetas.
+- Desbordamiento en la expansión del Acordeón: Al usar un valor de flex demasiado alto (flex: 100) para mostrar el texto completo, la imagen perdía su centro visual. Solución: Se balanceó el valor de flex y se añadió un fondo sólido para rellenar los espacios laterales.
+- Sincronización de clases en CSS: Se aplicaron estilos a clases que no coincidían exactamente con los nombres en el HTML (ej. dios-detalles vs dios-atributos). Solución: Normalización de nombres de clases en todas las hojas de estilo de componentes.
+- Menú móvil inaccesible: El icono de hamburguesa no aparecía en resoluciones bajas. Solución: Se configuró una media query específica para mostrar el label del menú y ocultar la lista de navegación por defecto.
+
+6. CONTENIDO DE LA MATERIA APLICADO
+- Diseño Responsivo: Uso de Media Queries para transformar el acordeón de horizontal (PC) a vertical (móvil).
+- Interactividad con CSS: Implementación de transiciones suaves (transition) y selectores de estado (:checked y :hover).
+- Maquetación Elástica: Uso de Flexbox para crear componentes que se adaptan al espacio disponible sin romper el diseño.
+- Almacenamiento Web: Uso de la API de localStorage para capturar y mantener datos de usuario de forma local.
+
+7. CONCLUSIONES
+El proyecto integra exitosamente componentes de UI modernos. La diferenciación entre el carrusel de la página principal y el acordeón del bestiario permite una navegación variada. Se priorizó la integridad visual de las imágenes de las criaturas, logrando un balance entre el texto informativo y la gráfica mitológica.
+
+8. FIGMA, REPOSITORIO Y VIDEO
+Figma: https://www.figma.com/design/EpndUbQyxkJk2NAT7va6xF/olimpo?node-id=0-1&t=dQjYUNBs58nu4JB9-1
+GitHub: https://github.com/RociVB/Dioses-del-olimpo
+Video: https://www.mediafire.com/file/bxwxh6z7x6qiarp/efectos.mp4/file

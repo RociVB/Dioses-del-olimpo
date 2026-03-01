@@ -1,0 +1,241 @@
+/* VARIABLES GLOBALES */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Forum&display=swap');
+
+:root {
+    --ciruela: #732449;
+    --marfil: #F2E6D8;
+    --castaño: #8C521F;
+    --ladrillo: #8C3E37;
+    --alquitran: #260101;
+    --mar: #1D4F8D;
+    --oro: #D4AF37;
+    --amarillo: #FFD700;
+
+
+    --fuente-titulos: 'Cormorant Garamond', serif;
+    --fuente-texto: 'Forum', serif;
+
+    --espaciado-sm: 8px;
+    --espaciado-md: 16px;
+    --espaciado-lg: 32px;
+    --espaciado-xl: 48px;
+
+    --sombra-suave: 0 4px 10px rgba(0, 0, 0, 0.08);
+    --sombra-media: 0 8px 20px rgba(0, 0, 0, 0.12);
+    --sombra-hover: 0 12px 25px rgba(0, 0, 0, 0.2);
+
+    --transicion: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--alquitran);
+    color: var(--marfil);
+    font-family: var(--fuente-texto);
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--marfil);
+    text-transform: uppercase;
+}
+
+/* REGLAS BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--alquitran);
+    color: var(--marfil);
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    color: var(--oro);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transicion);
+}
+
+/* HEADER */
+.header-principal {
+    width: 100%;
+    background-color: var(--alquitran); 
+    border-bottom: 2px solid var(--oro);
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+}
+
+/* Ajuste para que el menú y el logo se vean bien alineados */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 50px; 
+    width: auto;
+}
+
+.site-title {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.epigrafe {
+    font-style: italic;
+    color: var(--castaño);
+    margin-bottom: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    padding: 5px 15px;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--oro);
+    border-bottom: 1px solid var(--oro);
+    text-shadow: var(--sombra-hover);
+}
+
+/* TITULOS DE PÁGINA */
+.pagina-titulo {
+    text-align: center;
+    padding: 80px 0; 
+    background: var(--alquitran);
+    border-bottom: 1px solid var(--castaño);
+}
+
+.pagina-titulo h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+
+/* FOOTER */
+.footer-principal {
+    background: var(--alquitran);
+    padding: 60px 0 20px;
+    border-top: 2px solid var(--oro);
+    margin-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: left;
+}
+
+.footer-logo {
+    width: 70px;
+    margin-bottom: 15px;
+}
+
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a:hover { color: var(--oro); }
+
+.footer-bottom {
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid var(--castaño);
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .oraculo-grid, .bestia-item {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .bestia-img img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .site-title { font-size: 2rem; }
+}
+
+/* MENU HAMBURGUESA */
+/* Esconder el checkbox y el icono en computadoras */
+.menu-check, .menu-icono {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icono {
+        display: block; /* Aparecen las rayitas en móvil */
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%; /* Menú escondido a la izquierda */
+        top: 80px;
+        flex-direction: column;
+        background: var(--alquitran);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 100;
+    }
+
+    /* Cuando el checkbox está activo, el menú entra */
+    .menu-check:checked ~ .nav-menu {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 20px 0;
+    }
+}

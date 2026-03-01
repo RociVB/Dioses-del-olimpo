@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Oráculo · Crónicas del Olimpo</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Forum&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/oraculo.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+
+<body id="top">
+    <header class="header-principal">
+        <div class="container">
+            <div class="header-content"> 
+                <div class="logo-container"> 
+                    <img src="../images/logo dorado sin fondo.png" alt="Logo de Crónicas del Olimpo" class="logo">
+                    <h1 class="site-title">Crónicas del Olimpo</h1>
+                </div>
+                <p class="epigrafe">"Donde los inmortales gobiernan el destino de los hombres"</p>  
+            </div>
+        
+            <nav class="nav-principal"> 
+                <input type="checkbox" id="menu-check" class="menu-check" style="display:none;">
+                    <label for="menu-check" class="menu-icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#d4af37" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </label>
+                    
+                    <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">🏛️ Inicio</a></li>
+                    <li><a href="dioses.html" class="nav-link">⚡ Dioses</a></li>
+                    <li><a href="bestiario.html" class="nav-link">🐉 Bestiario</a></li>
+                    <li><a href="oraculo.html" class="nav-link active">🔮 Oráculo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <div class="container">
+                <h2>🔮 El Oráculo de Delfos</h2>
+                <p>Consulta tu destino y recibe mensajes de los dioses</p>
+            </div>
+        </section>
+
+        <section class="oraculo-principal">
+            <div class="container">
+                <div class="oraculo-intro">
+                    <div class="oraculo-contenido">
+                        <div class="oraculo-grid">
+                            
+                            <div class="oraculo-mensaje">
+                                <h3>⚡ La Pitia te habla</h3>
+                                <p>"Acércate, mortal, y formula tu pregunta. Los dioses del Olimpo escuchan desde las alturas y responderán según tu destino."</p>
+                                <div class="oraculo-simbolos" aria-hidden="true">
+                                    <span class="simbolo">🏛️</span>
+                                    <span class="simbolo">⚡</span>
+                                    <span class="simbolo">🔱</span>
+                                    <span class="simbolo">🦉</span>
+                                </div>
+                                <p class="oraculo-advertencia">
+                                    <small>Las respuestas son interpretadas por los dioses. Tu ofrenda será bien recibida.</small>
+                                </p>
+                            </div>
+                            
+                            <div class="oraculo-formulario">
+                                <h3>📬 Formula tu consulta</h3>
+                                
+                                <form id="oraculo-form" class="formulario-oraculo">
+                                    <div class="campo-formulario">
+                                        <label for="nombre">Tu nombre o linaje:</label>
+                                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Perseo, Helena, Aquiles..." required>
+                                    </div>
+                                    
+                                    <div class="campo-formulario">
+                                        <label for="email">Tu correo (mensajería de Hermes):</label>
+                                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                                    </div>
+
+                                    <div class="campo-formulario">
+                                        <label for="dios">¿A qué deidad deseas invocar?</label>
+                                        <select id="dios" name="dios" required>
+                                            <option value="" disabled selected>Selecciona una deidad</option>
+                                            <option value="zeus">⚡ Zeus - Justicia y Poder</option>
+                                            <option value="atenea">🦉 Atenea - Sabiduría y Estrategia</option>
+                                            <option value="apolo">☀️ Apolo - Profecía y Luz</option>
+                                            <option value="poseidon">🔱 Poseidón - Mares y Terremotos</option>
+                                            <option value="afrodita">🕊️ Afrodita - Amor y Belleza</option>
+                                            <option value="ares">⚔️ Ares - Guerra y Coraje</option>
+                                            <option value="hermes">🪽 Hermes - Viajes y Comercio</option>
+                                            <option value="artemisa">🌙 Artemisa - Naturaleza y Caza</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="campo-formulario">
+                                        <label for="tipo">Asunto de tu consulta:</label>
+                                        <select id="tipo" name="tipo" required>
+                                            <option value="" disabled selected>Selecciona el ámbito</option>
+                                            <option value="amor">❤️ Amor y Aflicciones</option>
+                                            <option value="trabajo">🏺 Prosperidad y Labor</option>
+                                            <option value="salud">⚕️ Salud y Vida</option>
+                                            <option value="viajes">⛵ Odiseas y Aventuras</option>
+                                            <option value="futuro">🔮 Destino e Inevitabilidad</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="campo-formulario">
+                                        <label for="consulta">Tu súplica u ofrenda:</label>
+                                        <textarea id="consulta" name="consulta" rows="5" placeholder="Escribe aquí tu pregunta... ¿Qué ofrendas traes al templo?" required></textarea>
+                                    </div>
+                                    
+                                    <div class="campo-formulario checkbox">
+                                        <input type="checkbox" id="acepto" name="acepto" required>
+                                        <label for="acepto">Acepto que las Moiras ya han tejido mi destino y el Oráculo solo lo revela.</label>
+                                    </div>
+                                    
+                                    <button type="submit" id="btn-enviar" class="boton-oraculo">
+                                        🔮 Enviar ofrenda al Olimpo
+                                    </button>
+                                </form>
+                                
+                                <div id="respuesta-oraculo" class="respuesta-contenedor hidden">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="ofrendas-section">
+            <div class="container">
+                <h3 class="section-subtitle">🪔 Ofrendas recomendadas</h3>
+                <div class="ofrendas-grid">
+                    <article class="ofrenda-card">
+                        <span class="ofrenda-icono" aria-hidden="true">🍷</span>
+                        <h4>Libaciones</h4>
+                        <p>Vino puro para Zeus y Dioniso.</p>
+                    </article>
+                    <article class="ofrenda-card">
+                        <span class="ofrenda-icono" aria-hidden="true">🌾</span>
+                        <h4>Primicias</h4>
+                        <p>Trigo y cebada para Deméter.</p>
+                    </article>
+                    <article class="ofrenda-card">
+                        <span class="ofrenda-icono" aria-hidden="true">🕊️</span>
+                        <h4>Incienso</h4>
+                        <p>Mirra para la radiante Afrodita.</p>
+                    </article>
+                    <article class="ofrenda-card">
+                        <span class="ofrenda-icono" aria-hidden="true">🦉</span>
+                        <h4>Olivo</h4>
+                        <p>Aceite sagrado para Atenea.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-principal">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="../images/logo dorado sin fondo.png" alt="Crónicas del Olimpo" class="footer-logo">
+                    <p>Crónicas del Olimpo © 2026</p>
+                    <p>Proyecto académico de Diseño Web</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explora</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="dioses.html">Dioses</a></li>
+                        <li><a href="bestiario.html">Bestiario</a></li>
+                        <li><a href="oraculo.html">Oráculo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><a href="#top">⬆️ Regresar al Olimpo</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../js/js.js"></script>
+</body>
+</html>

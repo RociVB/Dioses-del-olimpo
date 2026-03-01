@@ -1,0 +1,59 @@
+.oraculo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    background: var(--alquitran);
+    padding: 50px;
+    border: var(--sombra-suave);
+    margin: 40px 0;
+}
+
+.oraculo-simbolos {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.campo-formulario {
+    margin-bottom: 25px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--oro);
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--alquitran);
+    border: 1px solid var(--castaño);
+    color: var(--marfil);
+    font-family: var(--fuente-texto);
+    font-size: 1.1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--oro);
+    box-shadow: 0 0 5px var(--oro);
+}
+
+.boton-oraculo {
+    background: var(--oro);
+    color: var(--alquitran);
+    padding: 15px;
+    width: 100%;
+    border: none;
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.boton-oraculo:hover {
+    background: var(--amarillo);
+    letter-spacing: 3px;
+}

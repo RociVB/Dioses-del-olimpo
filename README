@@ -1,0 +1,53 @@
+# 🏛️ Crónicas del Olimpo
+
+![Crónicas del Olimpo]
+
+Sitio web de mitología griega desarrollado para la **e-actividad 3.1** de Diseño Web.  
+Un viaje interactivo por el Monte Olimpo, sus dioses, criaturas y misterios.
+
+---
+
+## 📋 **DESCRIPCIÓN**
+
+Página web informativa sobre la mitología de la antigua Grecia, con un diseño inspirado en la estética clásica y una paleta de colores personalizada "La Odisea". El sitio cuenta con cuatro secciones principales que permiten explorar el fascinante mundo de los dioses olímpicos, las criaturas mitológicas y consultar el oráculo.
+
+---
+
+## ✨ **CARACTERÍSTICAS DESTACADAS**
+
+* 🏛️ **Diseño Mobile-First:** Menú hamburguesa nativo y layout adaptativo para smartphones.
+* 🐉 **Bestiario Dinámico:** Acordeón de imágenes con efecto de expansión elástica.
+* 🔮 **Oráculo Persistente:** Uso de `localStorage` para guardar tus consultas míticas.
+* 🖼️ **Optimización Gráfica:** Manejo de proporciones con `background-size: contain` para evitar recortes en las bestias.
+* ⚡ **Carga Nativa:** Arquitectura sin dependencias externas ni empaquetadores para máxima velocidad.
+
+---
+
+## 🚀 **CÓMO VER EL PROYECTO**
+
+### Opción 1: Ver en línea (GitHub Pages)
+1. Ve a: `https://github.com/RociVB/Dioses-del-olimpo`
+2. Navega por las diferentes secciones usando el menú superior
+
+### Opcion 2:
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/RociVB/Dioses-del-olimpo.git](https://github.com/RociVB/Dioses-del-olimpo.git)
+    ```
+2.  **Entrar a la carpeta:**
+    ```bash
+    cd Dioses-del-olimpo
+    ```
+3.  **Ejecutar:**
+    Abre el archivo `index.html` en tu navegador favorito o usa la extensión **Live Server** en VS Code para una mejor experiencia.
+
+---
+
+## 📱 Diseño Responsivo
+
+El sitio fue desarrollado bajo la filosofía **Mobile-First**, asegurando que:
+- En **Móvil**: El acordeón y el contenido se apilan verticalmente para facilitar el scroll.
+- En **Desktop**: Los componentes aprovechan el ancho de pantalla, transformando el acordeón a un formato panorámico horizontal.
+
+---
