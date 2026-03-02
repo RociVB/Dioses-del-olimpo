@@ -6,36 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('consultasOraculo', JSON.stringify([]));
     }
 
-    // ===== FILTRO DE DIOSES =====
-    const filtroBtns = document.querySelectorAll('.filtro-btn');
-    const diosCards = document.querySelectorAll('.card-dios');
-
-    if (filtroBtns.length > 0 && diosCards.length > 0) {
-        console.log('✅ Filtro de dioses inicializado');
-    
-        function filtrarDioses(categoria) {
-            diosCards.forEach(card => {
-                const categorias = card.dataset.categoria.split(' ');
-                if (categoria === 'todos' || categorias.includes(categoria)) {
-                    card.style.display = 'block';
-                    card.style.opacity = '1';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    
-        filtroBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                filtroBtns.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                const categoria = this.dataset.filtro;
-                console.log('Filtrando por:', categoria);
-                filtrarDioses(categoria);
-            });
-        });
-    }
-    
     // ===== FORMULARIO DEL ORÁCULO CON LOCALSTORAGE =====
     const formulario = document.getElementById('oraculo-form');
     const respuestaDiv = document.getElementById('respuesta-oraculo');
@@ -70,10 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 "⚡ Zeus asiente ante tu petición. Buen augurio.",
                 "🌊 Poseidón agita las aguas... debes tener paciencia.",
                 "🦉 Atenea ilumina tu camino con sabiduría.",
-                "💀 Hades guarda silencio. No es momento de preguntar.",
+                "🏛️ El Olimpo guarda silencio. No es momento de preguntar.",
                 "☀️ Apolo predice grandes acontecimientos en tu futuro.",
-                "🔮 Hécate teje sombras... la respuesta llegará en sueños.",
-                "🦋 Tánatos susurra que la vida es un ciclo eterno.",
                 "⚖️ Némesis observa. La justicia divina actuará."
             ];
             

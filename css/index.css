@@ -1,0 +1,56 @@
+/* CARRUSEL AUTOMÁTICO */
+.hero-carrusel {
+    width: 100%;
+    overflow: hidden; /* Esto es como una ventana: lo que se sale del marco no se ve */
+    border: 5px solid var(--castaño);
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.carrousel-container ul {
+    display: flex; /* Ponemos las fotos una al lado de la otra, como un trencito */
+    width: 400%;   /* Como son 4 fotos, el contenedor tiene que ser 4 veces más ancho que la pantalla */
+    animation: slide 20s infinite alternate ease-in-out; /* la ciencia */
+}
+
+.carrousel-container li { 
+    width: 100%; /* Cada imagen ocupa exactamente el ancho de la pantalla */
+    list-style: none; 
+}
+
+.carrousel-container img { 
+    width: 100%; 
+    height: 450px; 
+    object-fit: cover; /* evita que las fotos se vean estiradas */
+}
+
+/* El cerebro del movimiento: los porcentajes son el tiempo de espera */
+@keyframes slide {
+    0%, 20% { margin-left: 0; }  
+    25%, 45% { margin-left: -100%; } 
+    50%, 70% { margin-left: -200%; }   
+    75%, 100% { margin-left: -300%; }   
+}
+
+/* Divisor */
+.divisor {
+    background-color: var(--alquitran);
+    padding: 10px 0;
+    text-align: center; 
+}
+
+.divisor-content h3 {
+    font-size: 1.8rem;
+    color: var(--oro);
+    margin-bottom: 2px;
+}
+
+/* tarjetas */
+.card-caracteristica {
+    background: var(--alquitran);
+    filter: brightness(1.5); /* aumentamos la luz */
+    padding: 20px;
+    border: 2px solid var(--castaño);
+    border-radius: 12px;
+    margin-bottom: 10px;
+}

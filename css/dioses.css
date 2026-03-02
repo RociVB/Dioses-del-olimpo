@@ -1,0 +1,68 @@
+/* EL PARALLAX */
+.parallax-img {
+    height: 100vh; /* Que la imagen ocupe toda la pantalla de alto */
+    width: 100%;
+    background-attachment: fixed; /* La foto se queda clavada mientras el resto sube */
+    background-position: center top;
+    background-size: cover; /* Que la imagen de los dioses llene todo sin deformarse */
+    border-top: 2px solid var(--castaño);
+    border-bottom: 2px solid var(--castaño);
+}
+
+/* SECCIÓN DE DIOSES */
+.seccion-grid { padding: 50px 0; }
+
+.dioses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 40px; 
+}
+
+.card-dios {
+    background: var(--alquitran);
+    border: 1px solid var(--castaño);
+    transition: var(--transicion); 
+    position: relative;
+}
+
+.card-dios:hover {
+    transform: translateY(-10px);
+    border-color: var(--oro); 
+    box-shadow: var(--sombra-hover); 
+}
+
+.dios-imagen img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(30%); 
+    border-bottom: 2px solid var(--oro);
+}
+
+/* BLOQUE DE TEXTO QUE "PISA" EL PARALLAX */
+.dios-info-bloque {
+    background-color: var(--alquitran);
+    padding: var(--espaciado-xl) 0;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Importante: esto hace que el bloque de texto pase POR ENCIMA de la imagen fija */
+    border-bottom: 5px solid var(--ciruela);
+}
+
+.dios-subtitulo {
+    display: block;
+    color: var(--mar);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px; 
+    margin-bottom: 20px;
+}
+
+.dios-detalles {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(140, 62, 55, 0.1); 
+    border: 1px solid var(--castaño);
+    display: inline-block; /* Que la cajita solo ocupe el ancho del texto */
+}
