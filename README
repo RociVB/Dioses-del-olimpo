@@ -35,7 +35,7 @@ Página web informativa sobre la mitología de la antigua Grecia, con un diseño
 git clone https://github.com/RociVB/Dioses-del-olimpo.git
 
 # Entrar a la carpeta
-cd olympus
+cd Dioses-del-olimpo
 
 # Abrir index.html en tu navegador
 # En Mac:
